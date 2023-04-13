@@ -778,7 +778,9 @@ recursiveExecute(JsQueryItem *jsq, JsonbValue *jb, JsQueryItem *jsqLeftArg,
 	return res;
 }
 
+PGDLLEXPORT
 PG_FUNCTION_INFO_V1(jsquery_json_exec);
+PGDLLEXPORT
 Datum
 jsquery_json_exec(PG_FUNCTION_ARGS)
 {
@@ -802,7 +804,9 @@ jsquery_json_exec(PG_FUNCTION_ARGS)
 	PG_RETURN_BOOL(res);
 }
 
+PGDLLEXPORT
 PG_FUNCTION_INFO_V1(json_jsquery_exec);
+PGDLLEXPORT
 Datum
 json_jsquery_exec(PG_FUNCTION_ARGS)
 {
@@ -826,7 +830,9 @@ json_jsquery_exec(PG_FUNCTION_ARGS)
 	PG_RETURN_BOOL(res);
 }
 
+PGDLLEXPORT
 PG_FUNCTION_INFO_V1(json_jsquery_filter);
+PGDLLEXPORT
 Datum
 json_jsquery_filter(PG_FUNCTION_ARGS)
 {
@@ -972,7 +978,9 @@ compareJsQuery(JsQueryItem *v1, JsQueryItem *v2)
 	return res;
 }
 
+PGDLLEXPORT
 PG_FUNCTION_INFO_V1(jsquery_cmp);
+PGDLLEXPORT
 Datum
 jsquery_cmp(PG_FUNCTION_ARGS)
 {
@@ -992,7 +1000,9 @@ jsquery_cmp(PG_FUNCTION_ARGS)
 	PG_RETURN_INT32(res);
 }
 
+PGDLLEXPORT
 PG_FUNCTION_INFO_V1(jsquery_lt);
+PGDLLEXPORT
 Datum
 jsquery_lt(PG_FUNCTION_ARGS)
 {
@@ -1012,7 +1022,9 @@ jsquery_lt(PG_FUNCTION_ARGS)
 	PG_RETURN_BOOL(res < 0);
 }
 
+PGDLLEXPORT
 PG_FUNCTION_INFO_V1(jsquery_le);
+PGDLLEXPORT
 Datum
 jsquery_le(PG_FUNCTION_ARGS)
 {
@@ -1032,7 +1044,9 @@ jsquery_le(PG_FUNCTION_ARGS)
 	PG_RETURN_BOOL(res <= 0);
 }
 
+PGDLLEXPORT
 PG_FUNCTION_INFO_V1(jsquery_eq);
+PGDLLEXPORT
 Datum
 jsquery_eq(PG_FUNCTION_ARGS)
 {
@@ -1052,7 +1066,9 @@ jsquery_eq(PG_FUNCTION_ARGS)
 	PG_RETURN_BOOL(res == 0);
 }
 
+PGDLLEXPORT
 PG_FUNCTION_INFO_V1(jsquery_ne);
+PGDLLEXPORT
 Datum
 jsquery_ne(PG_FUNCTION_ARGS)
 {
@@ -1072,7 +1088,9 @@ jsquery_ne(PG_FUNCTION_ARGS)
 	PG_RETURN_BOOL(res != 0);
 }
 
+PGDLLEXPORT
 PG_FUNCTION_INFO_V1(jsquery_ge);
+PGDLLEXPORT
 Datum
 jsquery_ge(PG_FUNCTION_ARGS)
 {
@@ -1092,7 +1110,9 @@ jsquery_ge(PG_FUNCTION_ARGS)
 	PG_RETURN_BOOL(res >= 0);
 }
 
+PGDLLEXPORT
 PG_FUNCTION_INFO_V1(jsquery_gt);
+PGDLLEXPORT
 Datum
 jsquery_gt(PG_FUNCTION_ARGS)
 {
@@ -1194,7 +1214,9 @@ hashJsQuery(JsQueryItem *v, pg_crc32 *crc)
 	}
 }
 
+PGDLLEXPORT
 PG_FUNCTION_INFO_V1(jsquery_hash);
+PGDLLEXPORT
 Datum
 jsquery_hash(PG_FUNCTION_ARGS)
 {

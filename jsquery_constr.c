@@ -190,7 +190,9 @@ joinJsQuery(JsQueryItemType type, JsQuery *jq1, JsQuery *jq2)
 	return out;
 }
 
+PGDLLEXPORT
 PG_FUNCTION_INFO_V1(jsquery_join_and);
+PGDLLEXPORT
 Datum
 jsquery_join_and(PG_FUNCTION_ARGS)
 {
@@ -206,7 +208,9 @@ jsquery_join_and(PG_FUNCTION_ARGS)
 	PG_RETURN_JSQUERY(out);
 }
 
+PGDLLEXPORT
 PG_FUNCTION_INFO_V1(jsquery_join_or);
+PGDLLEXPORT
 Datum
 jsquery_join_or(PG_FUNCTION_ARGS)
 {
@@ -222,7 +226,9 @@ jsquery_join_or(PG_FUNCTION_ARGS)
 	PG_RETURN_JSQUERY(out);
 }
 
+PGDLLEXPORT
 PG_FUNCTION_INFO_V1(jsquery_not);
+PGDLLEXPORT
 Datum
 jsquery_not(PG_FUNCTION_ARGS)
 {

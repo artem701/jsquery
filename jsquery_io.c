@@ -147,7 +147,9 @@ flattenJsQueryParseItem(StringInfo buf, JsQueryParseItem *item, bool onlyCurrent
 	return  pos;
 }
 
+PGDLLEXPORT
 PG_FUNCTION_INFO_V1(jsquery_in);
+PGDLLEXPORT
 Datum
 jsquery_in(PG_FUNCTION_ARGS)
 {
@@ -397,7 +399,9 @@ printJsQueryItem(StringInfo buf, JsQueryItem *v, bool inKey, bool printBracketes
 		printJsQueryItem(buf, &elem, true, true);
 }
 
+PGDLLEXPORT
 PG_FUNCTION_INFO_V1(jsquery_out);
+PGDLLEXPORT
 Datum
 jsquery_out(PG_FUNCTION_ARGS)
 {
